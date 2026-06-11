@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     default: "Gentleman Salon Motru — Frizerie Premium",
     template: "%s | Gentleman Salon Motru",
   },
+  icons: {
+    icon: "/icon.png",
+  },
   description: "Cel mai bun salon de frizerie din Motru. Tuns, bărbierit și styling premium. Echipă cu formare de top, atmosferă autentică. Programează-te pe Mero.",
 
   // ── Cuvinte cheie ──
