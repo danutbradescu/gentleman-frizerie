@@ -56,3 +56,13 @@ export async function getLatestPosts(count = 3) {
     { count }
   );
 }
+
+export async function getAllGalleryImages() {
+  return client.fetch(
+    `*[_type == "gallery"] | order(order asc) {
+      _id,
+      image,
+      category
+    }`
+  );
+}

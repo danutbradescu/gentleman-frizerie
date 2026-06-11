@@ -2,14 +2,18 @@ export default {
   name: "gallery",
   title: "Galerie Foto",
   type: "document",
+
   fields: [
     {
       name: "image",
       title: "Fotografie",
       type: "image",
-      options: { hotspot: true },
+      options: {
+        hotspot: true,
+      },
       validation: (Rule: any) => Rule.required(),
     },
+
     {
       name: "category",
       title: "Categorie",
@@ -23,16 +27,25 @@ export default {
         ],
       },
     },
+
     {
       name: "order",
-      title: "Ordinea de afișare",
+      title: "Ordine afișare",
       type: "number",
     },
   ],
+
   preview: {
-    select: { title: "category", media: "image" },
+    select: {
+      title: "category",
+      media: "image",
+    },
+
     prepare({ title, media }: any) {
-      return { title: title || "Fără categorie", media };
+      return {
+        title: title || "Fără categorie",
+        media,
+      };
     },
   },
 };
