@@ -24,7 +24,7 @@ export default function Hero() {
   const navLinks = [
     { label: "Despre noi", href: "#About" },
     { label: "Galerie", href: "/galerie" },
-    { label: "Recenzii", href: "https://mero.ro/p/gentlemanmotru?page=reviews&absp=company_details_deeplink", external: true },,
+    { label: "Recenzii", href: "https://mero.ro/p/gentlemanmotru?page=reviews&absp=company_details_deeplink", external: true },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
