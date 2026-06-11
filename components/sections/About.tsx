@@ -1,8 +1,6 @@
-import { getAllBarbers, urlFor } from "@/lib/sanity";
+import { getAllBarbers } from "@/lib/sanity";
 
 export default async function About() {
-  const barbers = await getAllBarbers();
-
   const values = [
     {
       nr: "01",
@@ -12,7 +10,7 @@ export default async function About() {
     {
       nr: "02",
       titlu: "Creativitate",
-      desc: "Fiecare tunsoare e o oportunitate de expresie. Artiștii noștri au libertatea să crească și să lase amprentă.",
+      desc: "Fiecare tunsoare e o oportunitate de expresie. Artiștii noștri au libertatea să creeze și să lase amprentă.",
     },
     {
       nr: "03",
@@ -36,7 +34,7 @@ export default async function About() {
       {/* ── INTRO ── */}
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1100px",
           margin: "0 auto",
           padding: "5rem 1.5rem",
           display: "grid",
@@ -44,7 +42,7 @@ export default async function About() {
           gap: "3rem",
         }}
       >
-        {/* stânga */}
+        {/* left */}
         <div>
           <p
             style={{
@@ -52,7 +50,7 @@ export default async function About() {
               letterSpacing: "0.35em",
               textTransform: "uppercase",
               color: "#CCFF00",
-              opacity: 0.8,
+              opacity: 0.85,
               marginBottom: "1rem",
             }}
           >
@@ -64,7 +62,7 @@ export default async function About() {
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(2rem, 5vw, 4rem)",
               fontWeight: 700,
-              lineHeight: 1.05,
+              lineHeight: 1.1,
               marginBottom: "1.5rem",
             }}
           >
@@ -81,7 +79,7 @@ export default async function About() {
           />
         </div>
 
-        {/* dreapta */}
+        {/* right */}
         <div
           style={{
             display: "flex",
@@ -90,11 +88,11 @@ export default async function About() {
           }}
         >
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.65)" }}>
-            Gentleman s-a născut dintr-o idee simplă: Motru merită mai mult decât o frizerie obișnuită. Merită un loc în care oamenii se simt bineveniți, artiștii au libertatea să crească, iar fiecare vizită lasă o amintire.
+            Gentleman s-a născut dintr-o idee simplă: Motru merită mai mult decât o frizerie obișnuită. Merită un loc în care oamenii se simt bineveniți și fiecare vizită contează.
           </p>
 
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.65)" }}>
-            Am construit Gentleman pe respect, creativitate și atenție la detalii — pentru că cele mai bune rezultate apar când profesionalismul și atmosfera se întâlnesc în același loc.
+            Am construit brandul pe respect, creativitate și atenție la detalii — pentru că experiența contează mai mult decât o simplă tunsoare.
           </p>
         </div>
       </div>
@@ -108,7 +106,7 @@ export default async function About() {
       >
         <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "1100px",
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
@@ -130,7 +128,7 @@ export default async function About() {
                   right: "1rem",
                   fontSize: "0.6rem",
                   letterSpacing: "0.2em",
-                  color: "rgba(255,255,255,0.1)",
+                  color: "rgba(255,255,255,0.12)",
                 }}
               >
                 {v.nr}
@@ -156,87 +154,6 @@ export default async function About() {
               >
                 {v.desc}
               </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ── BARBERS ── */}
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "5rem 1.5rem",
-        }}
-      >
-        <h2
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "2rem",
-            marginBottom: "2rem",
-          }}
-        >
-          Echipa
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "1rem",
-          }}
-        >
-          {barbers.map((barber: any) => (
-            <div
-              key={barber._id}
-              style={{
-                background: "#111",
-                border: "1px solid rgba(255,255,255,0.06)",
-                overflow: "hidden",
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  aspectRatio: "3/4",
-                }}
-              >
-                {barber.photo && (
-                  <img
-                    src={urlFor(barber.photo).width(600).url()}
-                    alt={barber.name}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                )}
-              </div>
-
-              <div style={{ padding: "1rem" }}>
-                <h3
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {barber.name}
-                </h3>
-
-                {barber.bio && (
-                  <p
-                    style={{
-                      fontSize: "0.85rem",
-                      color: "rgba(255,255,255,0.5)",
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {barber.bio}
-                  </p>
-                )}
-              </div>
             </div>
           ))}
         </div>
