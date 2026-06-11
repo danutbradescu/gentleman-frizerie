@@ -1,0 +1,16 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --neon: #CCFF00; --dark: #0a0a0a; }
+html { scroll-behavior: smooth; }
+body { background: var(--dark); color: #fff; font-family: 'Barlow Condensed', sans-serif; -webkit-font-smoothing: antialiased; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--neon); }
+a { color: inherit; }
+
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+}
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
