@@ -12,9 +12,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Câmpuri obligatorii lipsă." }, { status: 400 });
     }
 
-    await resend.emails.send({
-      from: "Gentleman Contact <onboarding@resend.dev>",
+    const { data, error } = await resend.emails.send({
+      from: "Gentleman Contact <contact@gentlemanstudio.ro>",
       to: "valeanuhairstyle@gmail.com",
+      replyTo: email,
       subject: `Mesaj nou de la ${nume}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #fff; padding: 2rem; border-radius: 8px;">
@@ -56,6 +57,12 @@ export async function POST(req: NextRequest) {
       `,
     });
 
+    if (error) {
+      console.error("Resend API error:", error);
+      return NextResponse.json({ error: "Eroare la trimitere." }, { status: 500 });
+    }
+
+    console.log("Resend success:", data);
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Resend error:", error);
