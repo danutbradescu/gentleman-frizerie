@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/page";
 
 export default function PoliticaConfidentialitate() {
   const sections = [
-    { titlu: "1. Cine suntem", content: `Valeanu Darius Alexandru Ion PFA, cu sediul în Str. Margaretei, nr. 11, bl. T6, et. 1, ap. 7, Motru, Gorj. CUI: [completează]. Contact: valeanuhairstyle@gmail.com, 0723 924 186.` },
+    { titlu: "1. Cine suntem", content: `Valeanu Darius Alexandru Ion PFA, cu sediul în Str. Margaretei, nr. 11, bl. T6, et. 1, ap. 7, Motru, Gorj. CUI: 45518704. Contact: valeanuhairstyle@gmail.com, 0723 924 186.` },
     { titlu: "2. Ce date colectăm", content: `Prin formularul de contact: nume, adresă de email, număr de telefon (opțional) și mesajul trimis. Nu colectăm date fără consimțământul tău explicit.` },
     { titlu: "3. De ce colectăm aceste date", content: `Exclusiv pentru a răspunde la mesajele trimise prin formularul de contact. Nu folosim datele tale în scopuri de marketing fără acordul tău.` },
     { titlu: "4. Cât timp păstrăm datele", content: `Datele din formularul de contact sunt păstrate maxim 12 luni, după care sunt șterse. Poți solicita ștergerea oricând scriindu-ne la valeanuhairstyle@gmail.com.` },

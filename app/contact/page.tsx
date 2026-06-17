@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Footer from "@/components/footer/page";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ nume: "", email: "", telefon: "", mesaj: "" });
@@ -282,16 +283,7 @@ export default function ContactPage() {
       </div>
 
       {/* Footer */}
-      <footer style={{
-        borderTop: "1px solid rgba(255,255,255,0.06)",
-        padding: isMobile ? "2rem 1.5rem" : "3rem 2.5rem",
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        fontSize: "0.72rem", letterSpacing: "0.1em",
-        color: "rgba(255,255,255,0.25)", textTransform: "uppercase",
-      }}>
-        <span>© {new Date().getFullYear()} Gentleman SALON</span>
-        <Link href="/" style={{ color: "#CCFF00", textDecoration: "none" }}>#Gentleman</Link>
-      </footer>
+      <Footer />
     </div>
   );
 }

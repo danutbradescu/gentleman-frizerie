@@ -4,6 +4,7 @@ import Barbers from "@/components/sections/Barbers";
 import BlogSnippet from "@/components/sections/BlogSnippet";
 import Location from "@/components/sections/Location";
 import About from "@/components/sections/About";
+import Footer from "@/components/footer/page";
 
 export const revalidate = 60;
 
@@ -19,6 +20,7 @@ export default async function HomePage() {
       <About />
       <BlogSnippet posts={latestPosts} />
       <Location />
+      <Footer />
     </>
   );
 }

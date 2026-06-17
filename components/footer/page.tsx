@@ -23,7 +23,7 @@ export default function Footer() {
           <p style={{ fontSize: "0.72rem", lineHeight: 1.8, letterSpacing: "0.02em" }}>
             VALEANU DARIUS ALEXANDRU ION PFA<br />
             Sediu: Str. Margaretei, nr. 11, bl. T6, et. 1, ap. 7, Motru, Gorj<br />
-            CUI: [completează CUI]
+            CUI: 45518704
           </p>
         </div>
 

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllGalleryImages, urlFor } from "@/lib/sanity";
+import Footer from "@/components/footer/page";
 
 const categoryLabels: Record<string, string> = {
   tuns: "Tuns",
@@ -261,16 +262,7 @@ export default function GaleriePage() {
         )}
 
         {/* FOOTER */}
-        <footer style={{
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          padding: "3rem 2.5rem",
-          display: "flex", alignItems: "center", justifyContent: "space-between",
-          fontSize: "0.72rem", letterSpacing: "0.1em",
-          color: "rgba(255,255,255,0.25)", textTransform: "uppercase",
-        }}>
-          <span>© {new Date().getFullYear()} Gentleman SALON · Motru</span>
-          <Link href="/" style={{ color: "#CCFF00", textDecoration: "none" }}>#Gentleman</Link>
-        </footer>
+        <Footer />
       </div>
     </>
   );

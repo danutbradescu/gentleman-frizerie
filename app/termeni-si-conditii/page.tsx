@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/page";
 
 export default function TermeniSiConditii() {
   const sections = [
-    { titlu: "1. Operator", content: `Valeanu Darius Alexandru Ion PFA, Str. Margaretei, nr. 11, bl. T6, et. 1, ap. 7, Motru, Gorj. CUI: [completează]. Email: valeanuhairstyle@gmail.com.` },
+    { titlu: "1. Operator", content: `Valeanu Darius Alexandru Ion PFA, Str. Margaretei, nr. 11, bl. T6, et. 1, ap. 7, Motru, Gorj. CUI: 45518704. Email: valeanuhairstyle@gmail.com.` },
     { titlu: "2. Servicii", content: `Gentleman Barbershop oferă servicii de frizerie și îngrijire personală (tuns, bărbierit, styling) în salon, precum și posibilitatea de programare online prin platforma Mero.` },
     { titlu: "3. Programări", content: `Programările se pot face prin platforma Mero (mero.ro/p/gentlemanmotru) sau direct la salon. Anularea unei programări trebuie efectuată cu minimum 2 ore înainte. Neprezentarea repetată poate duce la restricționarea accesului la programări online.` },
     { titlu: "4. Prețuri", content: `Prețurile afișate pe site sunt orientative și pot fi actualizate fără notificare prealabilă. Prețul final este cel comunicat în salon la momentul prestării serviciului.` },
