@@ -38,13 +38,14 @@ export default function Footer() {
           <Link href="/termeni-si-conditii" style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}>
             Termeni și Condiții
           </Link>
-          <a
-            href="https://ec.europa.eu/consumers/odr"
-            target="_blank" rel="noopener noreferrer"
-            style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
-          >
-            Soluționare Litigii (SOL/ANPC)
-          </a>
+          <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer"
+  style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}>
+  ANPC
+</a>
+<a href="https://consumer-redress.ec.europa.eu" target="_blank" rel="noopener noreferrer"
+  style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}>
+  Soluționare Litigii (SOL)
+</a>
         </div>
 
         {/* Contact rapid */}
